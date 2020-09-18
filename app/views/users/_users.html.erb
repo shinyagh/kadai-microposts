@@ -1,5 +1,7 @@
 <% if users.any? %>
   <ul class="list-unstyled">
+    <% Rails.logger.info("*******users*******") %>
+        <% Rails.logger.info(users) %>
     <% users.each do |user| %>
       <li class="media">
         <img class="mr-2 rounded" src="<%= gravatar_url(user, { size: 50 }) %>" alt="">
